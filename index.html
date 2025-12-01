@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cifrador Web — Binario & Morse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cifrador Web</h1>
+    <p>Elige método, offset y cifra/descifra texto</p>
+  </header>
+
+  <main class="container">
+    <label for="metodo">Método de cifrado:</label>
+    <select id="metodo" aria-label="Método de cifrado">
+      <option value="binario">1 — Binario</option>
+      <option value="morse">2 — Código Morse</option>
+    </select>
+
+    <label for="texto">Mensaje:</label>
+    <textarea id="texto" placeholder="Escribe tu mensaje..."></textarea>
+
+    <label for="offset">Desplazamiento (offset):</label>
+    <input id="offset" type="number" min="1" value="1" />
+
+    <div class="buttons">
+      <button id="btnEncode" type="button">Cifrar</button>
+      <button id="btnDecode" type="button">Descifrar</button>
+    </div>
+
+    <h3>Resultado:</h3>
+    <textarea id="resultado" readonly></textarea>
+  </main>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
